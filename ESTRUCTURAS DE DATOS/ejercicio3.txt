@@ -1,0 +1,16 @@
+//3)Construir una función que sume los elementos de una lista de enteros recursivamente.
+
+typedef struct nodo{
+    int dato; 
+    struct nodo *sig;
+}tnodo;
+
+void sumaelementos(tnodo *l, int total){
+    tnodo *aux; 
+    int suma;
+    
+    while(l!=NULL){
+        suma+=aux->dato;
+        aux=sumaelementos(aux->sig,suma);
+    }
+}
