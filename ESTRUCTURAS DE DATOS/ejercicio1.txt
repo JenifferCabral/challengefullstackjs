@@ -1,0 +1,23 @@
+//1)Implementar una función que recibe una lista de enteros L y un número entero n de forma
+//que modifique la lista mediante el borrado de todos los elementos de la lista que tengan este
+//valor
+
+typedef struct nodo{
+    int dato; 
+    struct nodo *sig;
+}tnodo;
+
+void borrarelemento(tnodo *l, int dato){
+    tnodo *aux=NULL;
+    
+    if(l!=NULL){
+        if(l->dato==dato){
+            aux=l;
+            l=l->sig;
+            free(aux);
+        }
+        else{
+            l->sig=borrarelemento(l->sig,dato);
+        }
+    }
+}
