@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1663892222 source:c:\users\jeniffer cabral\documents\challenge full stack js\ejercicio4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
